@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+HashTable	SimpleHashTable.h	/^} HashTable;$/;"	t	typeref:struct:tagHashTable
+Key	SimpleHashTable.h	/^	KeyType Key;$/;"	m	struct:tagNode
+KeyType	SimpleHashTable.h	/^typedef int KeyType;$/;"	t
+Node	SimpleHashTable.h	/^} Node;$/;"	t	typeref:struct:tagNode
+OBJECTS	Makefile	/^OBJECTS = SimpleHashTable.o main.o$/;"	m
+SHT_CreateHashTable	SimpleHashTable.c	/^HashTable* SHT_CreateHashTable(int TableSize){$/;"	f
+SHT_DestroyHashTable	SimpleHashTable.c	/^void SHT_DestroyHashTable(HashTable* HT){$/;"	f
+SHT_Get	SimpleHashTable.c	/^ValueType SHT_Get(HashTable* HT, KeyType Key){$/;"	f
+SHT_Hash	SimpleHashTable.c	/^int SHT_Hash(KeyType Key, int TableSize){$/;"	f
+SHT_Set	SimpleHashTable.c	/^void SHT_Set(HashTable* HT, KeyType Key, ValueType Value){$/;"	f
+SIMPLE_HASH_DEVIDE	SimpleHashTable.h	2;"	d
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+Table	SimpleHashTable.h	/^	Node* Table;$/;"	m	struct:tagHashTable
+TableSize	SimpleHashTable.h	/^	int TableSize;$/;"	m	struct:tagHashTable
+Value	SimpleHashTable.h	/^	ValueType Value;$/;"	m	struct:tagNode
+ValueType	SimpleHashTable.h	/^typedef int ValueType;$/;"	t
+main	main.c	/^int main(void){$/;"	f
+tagHashTable	SimpleHashTable.h	/^typedef struct tagHashTable$/;"	s
+tagNode	SimpleHashTable.h	/^typedef struct tagNode$/;"	s
