@@ -1,0 +1,15 @@
+gdb NoRVO
+gdb RVO
+
+gdb)break 58
+gdb)break 65
+
+gdb)run
+gdb)info locals
+gdb)continue
+gdb)info locals
+
+
+RVO shows memory address of object RVOtest is same
+but NoRVO shows memory address of object RVOtest is changed by copyconstructor
+
