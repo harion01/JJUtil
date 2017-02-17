@@ -13,3 +13,5 @@ gdb)info locals
 RVO shows memory address of object RVOtest is same
 but NoRVO shows memory address of object RVOtest is changed by copyconstructor
 
+
+http://stackoverflow.com/questions/7570152/object-returned-from-function-and-copy-constructor

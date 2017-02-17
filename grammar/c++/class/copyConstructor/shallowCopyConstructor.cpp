@@ -41,8 +41,8 @@ Chulsoo::~Chulsoo(){
 
 int main(void){
 	Chulsoo chulsoo("chulsoo");
-	Chulsoo chulhee(chulsoo); //Chulsoo chulhee = chulsoo  - copy constructor occor 
-
+	//Chulsoo chulhee(chulsoo); //Chulsoo chulhee = chulsoo  - copy constructor occor 
+	Chulsoo chulhee = chulsoo ;
 	chulsoo.introduce();
 	chulhee.introduce();
 
