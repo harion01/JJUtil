@@ -31,7 +31,6 @@ Chulsoo::~Chulsoo(){
 	cout << "+++ Chulsoo::~Chulsoo() destructor done +++" << endl;
 }
 
-	
 Chulsoo Chulsoo::operator+(const Chulsoo& chulsooObj){ //each time you call this function, constructor/copyconstructor/destroctor will be called
 	cout << "---- Chulsoo::operator+ call ---" << endl;
 	Chulsoo chulsoo(this->age + chulsooObj.age);

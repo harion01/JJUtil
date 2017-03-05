@@ -1,0 +1,16 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Chulsoo	RVOtest.cpp	/^Chulsoo::Chulsoo(){$/;"	f	class:Chulsoo
+Chulsoo	RVOtest.cpp	/^Chulsoo::Chulsoo(char* name){$/;"	f	class:Chulsoo
+Chulsoo	RVOtest.cpp	/^Chulsoo::Chulsoo(const Chulsoo& source){ \/\/defining copyconstrutor provides shallowcopy to chulsoo class$/;"	f	class:Chulsoo
+Chulsoo	RVOtest.cpp	/^class Chulsoo{$/;"	c	file:
+RVOtest	RVOtest.cpp	/^Chulsoo Chulsoo::RVOtest(){$/;"	f	class:Chulsoo
+introduce	RVOtest.cpp	/^void Chulsoo::introduce(){$/;"	f	class:Chulsoo
+main	RVOtest.cpp	/^int main(void){$/;"	f
+name	RVOtest.cpp	/^		char* name;$/;"	m	class:Chulsoo	file:
+rettest	RVOtest.cpp	/^Chulsoo rettest(){$/;"	f
+~Chulsoo	RVOtest.cpp	/^Chulsoo::~Chulsoo(){$/;"	f	class:Chulsoo
