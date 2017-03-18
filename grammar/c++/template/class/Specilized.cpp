@@ -31,7 +31,7 @@ void MyArray<T>::show_list(void){
 	}
 }
 
-
+///////////
 template <>
 class MyArray<int>{
 	private:
