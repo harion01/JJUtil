@@ -1,0 +1,17 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Count	LinkedQueue.h	/^	int Count;$/;"	m	struct:tagLinkedQueue
+Data	LinkedQueue.h	/^	char* Data; \/\/data type$/;"	m	struct:tagNode
+Front	LinkedQueue.h	/^	Node* Front;$/;"	m	struct:tagLinkedQueue
+LQ_CreateQueue	LinkedQueue.c	/^void LQ_CreateQueue(LinkedQueeue** Queue){$/;"	f
+LinkedQueeue	LinkedQueue.h	/^}LinkedQueeue;$/;"	t	typeref:struct:tagLinkedQueue
+LinkedQueeue	LinkedQueue.h	2;"	d
+NextNode	LinkedQueue.h	/^	struct tagNode* NextNode;$/;"	m	struct:tagNode	typeref:struct:tagNode::tagNode
+Node	LinkedQueue.h	/^} Node;$/;"	t	typeref:struct:tagNode
+Rear	LinkedQueue.h	/^	Node* Rear;$/;"	m	struct:tagLinkedQueue
+tagLinkedQueue	LinkedQueue.h	/^typedef struct tagLinkedQueue{$/;"	s
+tagNode	LinkedQueue.h	/^typedef struct tagNode{$/;"	s

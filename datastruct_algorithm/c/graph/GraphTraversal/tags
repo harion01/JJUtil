@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddEdge	Graph.c	/^void AddEdge(Vertex* V, Edge* E){$/;"	f
+AddVertex	Graph.c	/^void AddVertex(Graph* G, Vertex* V){$/;"	f
+AdjacencyList	Graph.h	/^	struct tagEdge* AdjacencyList; \/\/near by node list$/;"	m	struct:tagVertex	typeref:struct:tagVertex::tagEdge
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+Count	LinkedQueue.h	/^	int Count;$/;"	m	struct:tagLinkedQueue
+CreateEdge	Graph.c	/^Edge* CreateEdge(Vertex* From, Vertex* Target, int Weight){$/;"	f
+CreateGraph	Graph.c	/^Graph* CreateGraph(){$/;"	f
+CreateVertex	Graph.c	/^Vertex* CreateVertex(ElementType Data){$/;"	f
+Data	Graph.h	/^	ElementType Data;  \/\/data$/;"	m	struct:tagVertex
+Data	LinkedQueue.h	/^	char* Data; \/\/data type$/;"	m	struct:tagNode
+DestroyEdgt	Graph.c	/^void DestroyEdgt(Edge* E){$/;"	f
+DestroyGraph	Graph.c	/^void DestroyGraph(Graph* G){$/;"	f
+DestroyVertex	Graph.c	/^void DestroyVertex(Vertex* V){$/;"	f
+Edge	Graph.h	/^} Edge;$/;"	t	typeref:struct:tagEdge
+ElementType	Graph.h	/^typedef int ElementType;$/;"	t
+From	Graph.h	/^	Vertex* From;  \/\/source node$/;"	m	struct:tagEdge
+Front	LinkedQueue.h	/^	Node* Front;$/;"	m	struct:tagLinkedQueue
+GRAPH_GRAVERSAL_H	GraphTraversal.h	2;"	d
+GRAPH_H	Graph.h	2;"	d
+Graph	Graph.h	/^} Graph;$/;"	t	typeref:struct:tagGraph
+Index	Graph.h	/^	int Index;   \/\/index number$/;"	m	struct:tagVertex
+LQLinkedQueeue	LinkedQueue.h	2;"	d
+LQ_CreateNode	LinkedQueue.c	/^Node* LQ_CreateNode(char* NewData){$/;"	f
+LQ_CreateQueue	LinkedQueue.c	/^void LQ_CreateQueue(LinkedQueue** Queue){$/;"	f
+LQ_Dequeue	LinkedQueue.c	/^Node* LQ_Dequeue(LinkedQueue* Queue){$/;"	f
+LQ_DestroyNode	LinkedQueue.c	/^void LQ_DestroyNode(Node* _Node){$/;"	f
+LQ_DestroyQueue	LinkedQueue.c	/^void LQ_DestroyQueue(LinkedQueue* Queue){$/;"	f
+LQ_Enqueue	LinkedQueue.c	/^void LQ_Enqueue(LinkedQueue* Queue, Node* NewNode ){$/;"	f
+LQ_IsEmpty	LinkedQueue.c	/^int LQ_IsEmpty(LinkedQueue* Queue){$/;"	f
+LinkedQueue	LinkedQueue.h	/^}LinkedQueue;$/;"	t	typeref:struct:tagLinkedQueue
+Next	Graph.h	/^	struct tagEdge* Next;  $/;"	m	struct:tagEdge	typeref:struct:tagEdge::tagEdge
+Next	Graph.h	/^	struct tagVertex* Next;  \/\/next vertex(list data structure)$/;"	m	struct:tagVertex	typeref:struct:tagVertex::tagVertex
+NextNode	LinkedQueue.h	/^	struct tagNode* NextNode;$/;"	m	struct:tagNode	typeref:struct:tagNode::tagNode
+Node	LinkedQueue.h	/^} Node;$/;"	t	typeref:struct:tagNode
+NotVisited	Graph.h	/^enum Visitmode {Visited, NotVisited};$/;"	e	enum:Visitmode
+OBJECTS	Makefile	/^OBJECTS = Graph.o Test.o $/;"	m
+PrintGraph	Graph.c	/^void PrintGraph(Graph* G){$/;"	f
+Rear	LinkedQueue.h	/^	Node* Rear;$/;"	m	struct:tagLinkedQueue
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+Target	Graph.h	/^	Vertex* Target;  \/\/dest node$/;"	m	struct:tagEdge
+Vertex	Graph.h	/^} Vertex;$/;"	t	typeref:struct:tagVertex
+VertexCount	Graph.h	/^	int VertexCount; \/\/number of total node$/;"	m	struct:tagGraph
+Visited	Graph.h	/^	int Visited;  \/\/is this node visited?$/;"	m	struct:tagVertex
+Visited	Graph.h	/^enum Visitmode {Visited, NotVisited};$/;"	e	enum:Visitmode
+Visitmode	Graph.h	/^enum Visitmode {Visited, NotVisited};$/;"	g
+Weight	Graph.h	/^	int Weight;  \/\/wight value (lengh of edge, etc)$/;"	m	struct:tagEdge
+tagEdge	Graph.h	/^typedef struct tagEdge{$/;"	s
+tagGraph	Graph.h	/^typedef struct tagGraph{$/;"	s
+tagLinkedQueue	LinkedQueue.h	/^typedef struct tagLinkedQueue{$/;"	s
+tagNode	LinkedQueue.h	/^typedef struct tagNode{$/;"	s
+tagVertex	Graph.h	/^typedef struct tagVertex {$/;"	s
+vertices	Graph.h	/^	Vertex* vertices; \/\/top pointer of vertex list$/;"	m	struct:tagGraph

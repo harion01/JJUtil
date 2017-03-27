@@ -1,17 +1,18 @@
-#include "SimpleHashTable.h"
+#include "Chaining.h"
 
 int main(void){
-	HashTable* HT = SHT_CreateHashTable(193);
+	HashTable* HT = CHT_CreateHashTable(2);
 
-	SHT_Set(HT, 418, 32114);
-	SHT_Set(HT, 9, 514);
-	SHT_Set(HT, 27, 8917);
-	SHT_Set(HT, 1031, 286);
+	CHT_Set(HT, 418, "test");
+	CHT_Set(HT, 418, "test1111");
+	CHT_Set(HT, 9, "test2");
+	CHT_Set(HT, 27, "test3");
+	CHT_Set(HT, 1031, "test4");
 	
-	printf("Key:%d, Value:%d\n", 418, SHT_Get(HT, 418));
-	printf("Key:%d, Value:%d\n", 9, SHT_Get(HT, 9));
-	printf("Key:%d, Value:%d\n", 27, SHT_Get(HT, 27));
-	printf("Key:%d, Value:%d\n", 1031, SHT_Get(HT, 1031));
+	printf("Key:%d, Value:%s\n", 418, CHT_Get(HT, 418));
+	printf("Key:%d, Value:%s\n", 9, CHT_Get(HT, 9));
+	printf("Key:%d, Value:%s\n", 27, CHT_Get(HT, 27));
+	printf("Key:%d, Value:%s\n", 1031, CHT_Get(HT, 1031));
 
 	return 0;
 }

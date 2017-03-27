@@ -5,13 +5,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef int KeyType;
-typedef int ValueType;
-
 typedef struct tagNode
 {
-	KeyType Key;
-	ValueType Value;
+	int Key;
+	char* Value;
+	struct tagNode* Next;
 } Node;
 
 typedef Node* List;
@@ -19,17 +17,17 @@ typedef Node* List;
 typedef struct tagHashTable
 {
 	int TableSize;
-	List* Table;
+	Node** Table;
 } HashTable;
 
 HashTable* CHT_CreateHashTable(int TableSize);
 void CHT_DestroyHashTable(HashTable* HT);
 
-Node* CHT_CreateNode(KeyType Key, ValueType Value);
-Node* CHT_DestroyNode(Node* TheNode);
+Node* CHT_CreateNode(int Key, char* Value);
+void CHT_DestroyNode(Node* TheNode);
 
-void CHT_Set(HashTable* HT, KeyType Key, ValueType Value);
-ValueType CHT_Get(HashTable* HT, KeyType Key);
-int CHT_Hash(KeyType Key, int KeyLength, int TableSize);
+void CHT_Set(HashTable* HT, int Key, char* Value);
+char* CHT_Get(HashTable* HT, int Key);
+int CHT_Hash(int Key, int TableSize);
 
 #endif

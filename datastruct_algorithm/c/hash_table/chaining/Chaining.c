@@ -11,47 +11,38 @@ HashTable* CHT_CreateHashTable(int TableSize){
 	return HT;
 }
 
-void CHT_DestroyHashTable(HashTable* HT){
-	free(HT->Table);
-	free(HT->Value);
-	free(HT);
-}
 
-Node* CHT_CreateNode(KeyType Key, ValueType Value){
+Node* CHT_CreateNode(int Key, char* Value){
 	Node* NewNode = (Node*)malloc(sizeof(Node));
 	
-	NewNode->Key = (char*)malloc(sizeof(char)*(strlen(Key)+1);
-	strcpy(NewNode->Key, Key);
-
-	NewNode->Value = (char*)malloc(sizeof(char)*(strlen(Value)+1);
+	NewNode->Key = Key;
+	NewNode->Value = (char*)malloc(sizeof(char)*(strlen(Value)+1));
 	strcpy(NewNode->Value, Value);
 
 	return NewNode;
 }
 
 void CHT_DestroyNode(Node* TheNode){
-	free(TheNode->Key);
 	free(TheNode->Value);
 	free(TheNode);
 }
 
-void CHT_Set(HashTable* HT, KeyType Key, ValueType Value){
-	int Address = SHT_Hash(Key, strlen(Key), HT->TableSize);
+void CHT_Set(HashTable* HT, int Key, char* Value){
+	int Address = CHT_Hash(Key,  HT->TableSize);
 	Node* NewNode = CHT_CreateNode(Key, Value);
 
 	if(HT->Table[Address] == NULL){
 		HT->Table[Address] = NewNode;
-	}else {
+	}else { //use linked list for collision case
 		List L = HT->Table[Address];
 		NewNode->Next = L;
 		HT-> Table[Address] = NewNode;
-
 		printf("collision occured! \n");
 	}
 }
 
-ValueType CHT_Get(HashTable* HT, KeyType Key){
-	int Address = CHT_Hash(Key, stlen(Key),HT->TableSize);
+char* CHT_Get(HashTable* HT, int Key){
+	int Address = CHT_Hash(Key, HT->TableSize);
 
 	List TheList = HT->Table[Address];
 	List Target = NULL;
@@ -59,30 +50,31 @@ ValueType CHT_Get(HashTable* HT, KeyType Key){
 	if(TheList == NULL)
 		return NULL;
 
-	
-	whiel(1){
-		if(strcmp(TheList->Key, Key) == 0){
+	while(1){
+		if(TheList->Key == Key){
 			Target = TheList;
 			break;
 		}
 
-		if(TheList->Next == NULL)
+		if(TheList->Next == NULL){
 			return NULL;
-		else
+		}else{
 			TheList = TheList->Next;
+		}
 	}
-
 
 	return Target->Value;
 }
 
 void CHT_DestroyList( List L){
-	if(L == NULL)
+	if(L == NULL){
 		return;
+	}
 
-	if(L->Next != NULL)
-		CHT_Destroy(L->Next);
-	
+	if(L->Next != NULL){ //recursive call for free all node
+		CHT_DestroyNode(L->Next);
+	}
+
 	CHT_DestroyNode(L);
 }
 
@@ -94,20 +86,11 @@ void CHT_DestroyHashTable(HashTable* HT){
 		CHT_DestroyList(L);
 	}
 
-	free(HT->Table);
 	free(HT);
 
 }
 
-int CHT_Hash(KeyType Key, int KeyLength, int TableSize){
-	int i=0;
-	int HashValue = 0;
+int CHT_Hash(int Key , int TableSize){
 
-	for(i = 0 ; i<KeyLength; i++){
-		HashValue = (HashValue << 3) +Key[i];
-	}
-
-	HashValue = HashValue % TableSize;
-	return HavheValue;
-
+	return Key % TableSize;
 }

@@ -1,0 +1,29 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+CHAINING_HASH_TABLE_H	Chaining.h	2;"	d
+CHT_CreateHashTable	Chaining.c	/^HashTable* CHT_CreateHashTable(int TableSize){$/;"	f
+CHT_CreateNode	Chaining.c	/^Node* CHT_CreateNode(int Key, char* Value){$/;"	f
+CHT_DestroyHashTable	Chaining.c	/^void CHT_DestroyHashTable(HashTable* HT){$/;"	f
+CHT_DestroyList	Chaining.c	/^void CHT_DestroyList( List L){$/;"	f
+CHT_DestroyNode	Chaining.c	/^void CHT_DestroyNode(List* TheNode){$/;"	f
+CHT_Get	Chaining.c	/^char* CHT_Get(HashTable* HT, int Key){$/;"	f
+CHT_Hash	Chaining.c	/^int CHT_Hash(int Key , int TableSize){$/;"	f
+CHT_Set	Chaining.c	/^void CHT_Set(HashTable* HT, int Key, char* Value){$/;"	f
+HashTable	Chaining.h	/^} HashTable;$/;"	t	typeref:struct:tagHashTable
+Key	Chaining.h	/^	int Key;$/;"	m	struct:tagNode
+List	Chaining.h	/^typedef Node* List;$/;"	t
+Node	Chaining.h	/^} Node;$/;"	t	typeref:struct:tagNode
+OBJECTS	Makefile	/^OBJECTS = Chaining.o $/;"	m
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+Table	Chaining.h	/^	List* Table;$/;"	m	struct:tagHashTable
+TableSize	Chaining.h	/^	int TableSize;$/;"	m	struct:tagHashTable
+Value	Chaining.h	/^	char* Value;$/;"	m	struct:tagNode
+main	main.c	/^int main(void){$/;"	f
+tagHashTable	Chaining.h	/^typedef struct tagHashTable$/;"	s
+tagNode	Chaining.h	/^typedef struct tagNode$/;"	s

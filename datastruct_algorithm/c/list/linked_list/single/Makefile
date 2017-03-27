@@ -1,7 +1,7 @@
 .SUFFIXES : .c .o .cpp   
 #surfix format for target file
 
-OBJECTS = Chaining.o main.o
+OBJECTS = SingleLinkedList.o Test.o
 #object file name
 
 CC = g++
