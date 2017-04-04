@@ -57,6 +57,13 @@ int main(){
 	for(vector<int>::iterator it = v.begin(); it != v.end(); it++){
 		cout << "value : " << *it << endl;
 	}
+	
+	//
+	v.reserve(20); //allocate memory for vector
+	cout << "v.capacity() : " << v.capacity() << " // v.size() : " << v.size() << endl; 
+	for(vector<int>::iterator it = v.begin(); it != v.end(); it++){
+		cout << "value : " << *it << endl;
+	}
 
 	return 0;
 }

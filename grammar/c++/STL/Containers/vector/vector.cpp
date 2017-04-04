@@ -55,6 +55,19 @@ int main(){
 		cout << "v3["<<i<<"] : " << v3[i] << endl;
 	}
 
+	//swap
+	v2.swap(v3);
+	cout << " ========== swap check ==============" << endl;
+	cout << " size of v2 - v2.size()  : " << v2.size() << endl;
+	for(int i=0; i<v2.size(); i++){
+		cout << "v2["<<i<<"] : " << v2[i] << endl;
+	}
+
+	cout << " size of v3 - v3.size()  : " << v3.size() << endl;
+	for(int i=0; i<v3.size(); i++){
+		cout << "v3["<<i<<"] : " << v3[i] << endl;
+	}
+
 	// reassign
 	cout << "=== re assaign ===" << endl;
 	v3.assign(4,1); //change total size of v3 to 4 and set data as 1
@@ -87,11 +100,61 @@ int main(){
 	for(vector<int>::iterator it = v3.begin(); it != v3.end(); it++){
 		cout << "value : " << *it << endl;
 	}
+	cout <<"==== check by reverse_iterator " << endl;
+	for(vector<int>::reverse_iterator it = v3.rbegin(); it != v3.rend(); it++){
+		cout << "value : " << *it << endl;
+	}
+
 
 	cout << "==== check by by []" << endl;
 	for(int i=0; i<v3.size(); i++){
 		cout << "v3["<<i<<"] : " << v3[i] << endl;
 	}
+
+	//const iterator
+	cout << "==== iterator & const_iterator ===" << endl;
+	vector<int>::iterator iter = v.begin();
+	vector<int>::const_iterator citer = v2.begin();
+
+	*iter = 100;
+	//*citer = 100; //const iterator can not change value
+
+	cout << "*iter :" << *iter << endl;
+	cout << "*const_iter :" << *citer << endl;
+
+	//insert test
+	cout << "==== insert test ===" << endl;
+	vector<int> inv(5,1);
+	vector<int>::iterator idx = inv.begin() +2;
+	inv.insert(idx, 3, 100); //insert 100, 100, 100 to idx potision of inv
+	for(auto i : inv){
+		cout << i << " " ;
+	}
+	cout << endl;
+
+	vector<int> inv2(2,200);
+	idx = inv.begin()+1;
+	inv.insert(idx, inv2.begin(), inv2.end()); //insert inv2 to inv at idx potision
+	for(auto i : inv){
+		cout << i << " " ;
+	}
+	cout << endl;
+	
+	//erase test
+	cout << "==== erase test ===" << endl;
+	idx = inv.begin();
+	inv.erase(idx);
+	for(auto i : inv){
+		cout << i << " " ;
+	}
+	cout << endl;
+
+	inv.erase(inv.begin()+3, inv.end());
+	inv.erase(idx);
+	for(auto i : inv){
+		cout << i << " " ;
+	}
+	cout << endl;
 
 	return 0;
 }

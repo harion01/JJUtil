@@ -18,6 +18,17 @@ The main drawback of lists and forward_lists compared to these other sequence co
 - http://www.cplusplus.com/reference/list/list/
 */
 
+bool Predicate(int n){
+	return n < 0;
+}
+
+class CustomGreater{
+	public:
+		bool operator()(int left, int right) const{
+			//cout << "left[" << left << "] right[" << right << "]" << endl;
+			return left > right;
+		}
+};
 
 int main(){
 	list<int> lt;
@@ -49,6 +60,12 @@ int main(){
 	}
 	cout << endl;
 
+	cout << "========= erase test ==============" << endl;
+	lt.erase(lt.begin());
+	for(auto i : lt){
+		cout << i << " " ;
+	}
+	cout << endl;
 	
 	cout << "========= splice test  ==============" << endl;
 	list<int> lt2;
@@ -75,5 +92,59 @@ int main(){
 	}
 	cout << endl;
 
+
+	cout << "==== remove_if ==== " << endl;
+	lt.remove_if(Predicate); //remove value which returns true when element is given to Predicate function.
+	for(auto i = lt.begin(); i != lt.end(); i++){
+		cout << *i << " " ;
+	}
+	cout << endl;
+
+	cout << "==== reverse ==== " << endl;
+	lt.reverse();
+	for(auto i = lt.begin(); i != lt.end(); i++){
+		cout << *i << " " ;
+	}
+	cout << endl;
+
+	cout << "==== sort ==== " << endl;
+	lt.sort(less<int>());
+	for(auto i = lt.begin(); i != lt.end(); i++){
+		cout << *i << " " ;
+	}
+	cout << endl;
+
+	lt.sort(greater<int>());
+	for(auto i = lt.begin(); i != lt.end(); i++){
+		cout << *i << " " ;
+	}
+	cout << endl;
+
+
+	lt.sort(CustomGreater());
+	for(auto i = lt.begin(); i != lt.end(); i++){
+		cout << *i << " " ;
+	}
+	cout << endl;
+
+	cout << "=== merge with predicate === " << endl;
+	list<int> ml1;
+	ml1.push_back(-10);
+	ml1.push_back(-20);
+	ml1.push_back(-30);
+	ml1.push_back(-40);
+
+	list<int> ml2;
+	ml2.push_back(10);
+	ml2.push_back(20);
+	ml2.push_back(30);
+	ml2.push_back(40);
+
+	ml1.merge(ml2, greater<int>());
+	for(auto i : ml1){
+		cout << i << " " ;
+	}
+	cout << endl;
+	
 	return 0;
 }

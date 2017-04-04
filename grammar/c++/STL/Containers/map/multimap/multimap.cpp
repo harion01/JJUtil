@@ -10,6 +10,7 @@ int main(){
 	
 	//insert
 	mm.insert(make_pair("A", 10));
+	mm.insert(make_pair("A", 10));
 	mm.insert(make_pair("B", 20));
 	mm.insert(make_pair("C", 30));
 	mm.insert(make_pair("D", 40));

@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+Data	Tree.h	/^	ElementType Data;$/;"	m	struct:tagLCRSNode
+ElementType	Tree.h	/^typedef char ElementType;$/;"	t
+LCRSNode	Tree.h	/^}LCRSNode;$/;"	t	typeref:struct:tagLCRSNode
+LCRS_AddChildNode	Tree.c	/^void LCRS_AddChildNode(LCRSNode* Parent, LCRSNode* Child){$/;"	f
+LCRS_CreateNode	Tree.c	/^LCRSNode* LCRS_CreateNode(ElementType NewData){$/;"	f
+LCRS_DestroyNode	Tree.c	/^void LCRS_DestroyNode(LCRSNode* Node){$/;"	f
+LCRS_PrintTree	Tree.c	/^void LCRS_PrintTree(LCRSNode* Node, int Depth){$/;"	f
+LCRS_TREE_H	Tree.h	2;"	d
+LeftChild	Tree.h	/^	struct tagLCRSNode* LeftChild;$/;"	m	struct:tagLCRSNode	typeref:struct:tagLCRSNode::tagLCRSNode
+OBJECTS	Makefile	/^OBJECTS = LinkedQueue.o Test.o$/;"	m
+RightSibling	Tree.h	/^	struct tagLCRSNode* RightSibling;$/;"	m	struct:tagLCRSNode	typeref:struct:tagLCRSNode::tagLCRSNode
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+main	Test.c	/^int main(){$/;"	f
+tagLCRSNode	Tree.h	/^typedef struct tagLCRSNode{$/;"	s

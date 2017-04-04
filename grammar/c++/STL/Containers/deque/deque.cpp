@@ -29,10 +29,22 @@ int main(){
 	cout << "push front test" << endl;
 	dq.push_front(-10);
 	dq.push_front(-20);
+	c = 0;
 	for(deque<int>::iterator it = dq.begin() ; it != dq.end() ; it++){
 		cout << "dq["<< c << "] : " << *it << endl;
 		c++;
 	}
+
+
+	cout << "insert test " << endl;
+	deque<int> insertq;
+	dq.insert(dq.begin()+2, 0);
+	dq.insert(dq.begin()+2, 0);
+	c =0;
+	for(auto i : dq){
+		cout << i << " ";
+	}
+	cout << endl;
 
 	cout << "pop test" << endl;
 	int ret=0;
@@ -44,12 +56,14 @@ int main(){
 
 	ret = dq.front();
 	cout << "front : " << ret << endl;
-	dq.pop_front();
+	dq.pop_front(); //remove first item
 	ret = dq.front();
 	cout << "after pop_front : " << ret << endl;
 
 	dq.pop_front();
 	dq.pop_front();
+
+
 
 	//dangerous code
 	ret = dq.front();
