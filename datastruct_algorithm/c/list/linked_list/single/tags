@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+Data	SingleLinkedList.h	/^	ElementType Data;$/;"	m	struct:tagNode
+ElementType	SingleLinkedList.h	/^typedef int ElementType;$/;"	t
+LINKEDLIST_H	SingleLinkedList.h	2;"	d
+NextNode	SingleLinkedList.h	/^	struct tagNode* NextNode;$/;"	m	struct:tagNode	typeref:struct:tagNode::tagNode
+Node	SingleLinkedList.h	/^} Node;$/;"	t	typeref:struct:tagNode
+OBJECTS	Makefile	/^OBJECTS = SingleLinkedList.o Test.o$/;"	m
+SLL_AppendNode	SingleLinkedList.c	/^void SLL_AppendNode(Node** Head, Node* NewNode){$/;"	f
+SLL_CreateNode	SingleLinkedList.c	/^Node* SLL_CreateNode(ElementType NewData){$/;"	f
+SLL_DestroyNode	SingleLinkedList.c	/^void SLL_DestroyNode(Node* Node){$/;"	f
+SLL_GetNodeAt	SingleLinkedList.c	/^Node* SLL_GetNodeAt(Node* Head, int Location){$/;"	f
+SLL_GetNodeCount	SingleLinkedList.c	/^int SLL_GetNodeCount(Node* Head){$/;"	f
+SLL_InsertAfter	SingleLinkedList.c	/^void SLL_InsertAfter(Node* Current, Node* NewNode){$/;"	f
+SLL_InsertNewHead	SingleLinkedList.c	/^void SLL_InsertNewHead(Node** Head, Node* NewHead){$/;"	f
+SLL_RemoveNode	SingleLinkedList.c	/^void SLL_RemoveNode(Node** Head, Node* Remove){$/;"	f
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+main	Test.c	/^int main(void){$/;"	f
+tagNode	SingleLinkedList.h	/^typedef struct tagNode{$/;"	s

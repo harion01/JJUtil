@@ -1,0 +1,29 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+Data	LinkedListStack.h	/^	char* Data;$/;"	m	struct:tagNode
+LINKEDLIST_STACK_H	LinkedListStack.h	2;"	d
+LLS_CreateNode	LinkedListStack.c	/^Node* LLS_CreateNode(char* Data){$/;"	f
+LLS_CreateStack	LinkedListStack.c	/^void LLS_CreateStack(LinkedListStack** Stack){$/;"	f
+LLS_DestroyNode	LinkedListStack.c	/^void LLS_DestroyNode(Node* _Node){$/;"	f
+LLS_DestroyStack	LinkedListStack.c	/^void LLS_DestroyStack(LinkedListStack* Stack){$/;"	f
+LLS_GetSize	LinkedListStack.c	/^int LLS_GetSize(LinkedListStack* Stack){$/;"	f
+LLS_IsEmpty	LinkedListStack.c	/^int LLS_IsEmpty(LinkedListStack* Stack){$/;"	f
+LLS_Pop	LinkedListStack.c	/^Node* LLS_Pop(LinkedListStack* Stack){$/;"	f
+LLS_Push	LinkedListStack.c	/^void LLS_Push(LinkedListStack* Stack, Node* NewNode){$/;"	f
+LLS_Top	LinkedListStack.c	/^Node* LLS_Top(LinkedListStack* Stack){$/;"	f
+LinkedListStack	LinkedListStack.h	/^}LinkedListStack;$/;"	t	typeref:struct:tagLinkedListStack
+List	LinkedListStack.h	/^	Node* List;$/;"	m	struct:tagLinkedListStack
+NextNode	LinkedListStack.h	/^	struct tagNode* NextNode;$/;"	m	struct:tagNode	typeref:struct:tagNode::tagNode
+Node	LinkedListStack.h	/^}Node ;$/;"	t	typeref:struct:tagNode
+OBJECTS	Makefile	/^OBJECTS = LinkedListStack.o test.o$/;"	m
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+Top	LinkedListStack.h	/^	Node* Top;$/;"	m	struct:tagLinkedListStack
+main	test.c	/^int main(){$/;"	f
+tagLinkedListStack	LinkedListStack.h	/^typedef struct tagLinkedListStack{$/;"	s
+tagNode	LinkedListStack.h	/^typedef struct tagNode{$/;"	s

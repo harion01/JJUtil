@@ -16,5 +16,11 @@ class Calculator{
 		double Calculate(String Equation);
 }
 
+string InToPost(string Expression){
+	
+
+
+}
+
 
 #endif
