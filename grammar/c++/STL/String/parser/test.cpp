@@ -34,23 +34,5 @@ int main(){
 		cout << "[" <<  i  << "]" <<endl;
 	}
 
-	cout <<  JJ.removeall(s, " ") << endl;
-	cout << JJ.removeL(s, "test is") << endl;
-	cout << JJ.removeR(s, "is good") << endl;
-
-	cout << "Math : Inexpression parse - (1+2)+34+56 * 78 / 90 " << endl;
-	string inexpression = "(1+2)+34+56 * 78 / 90";
-	vector<string> math = JJ.parseMathExpression(inexpression);
-	for(auto i:math){
-		cout << "[" <<  i  << "]" <<endl;
-	}
-	
-	cout << "Math : Postexpression parse - 117.32 83 + 49*" << endl;
-	math.clear();
-	string postexpression = "117.32 83 + 49*";
-	math = JJ.parseMathExpression(postexpression);
-	for(auto i:math){
-		cout << "[" <<  i  << "]" <<endl;
-	}
 	return 0;
 }

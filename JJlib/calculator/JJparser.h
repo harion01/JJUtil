@@ -11,11 +11,11 @@ class JJparser{
 	
 	private :
 		vector<char> numbers;
-		bool IsNumber(char Cipher);
 
 	public : 
 		JJparser();
 		~JJparser();
+		bool IsNumber(char Cipher);
 		string getToken(string s, int startpos, string delim, int* nextpos);
 		//string padding(); // fill string 
 		string removeall(string s, string delim); // remove specific delimetor from original string
