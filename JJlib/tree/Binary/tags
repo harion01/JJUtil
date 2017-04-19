@@ -1,0 +1,32 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BIN	Makefile	/^BIN=test_target$/;"	m
+CXX	Makefile	/^CXX=g++$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS=-g -std=c++11 -Wall -c -W -L$(LIBPATH) -l$(LIBNAME) -I$(HEADPATH)$/;"	m
+Calculate	ExpressionTree.cpp	/^double EXPBtree::Calculate(TreeNode* Node){$/;"	f	class:EXPBtree
+CreateExpNode	ExpressionTree.cpp	/^TreeNode* EXPBtree::CreateExpNode(string data){$/;"	f	class:EXPBtree
+CreateExpTree	ExpressionTree.cpp	/^void EXPBtree::CreateExpTree(TreeNode** Node){$/;"	f	class:EXPBtree
+Data	ExpressionTree.h	/^	string Data;$/;"	m	struct:TreeNode
+EXPBtree	ExpressionTree.cpp	/^EXPBtree::EXPBtree(string PostExpression){$/;"	f	class:EXPBtree
+EXPBtree	ExpressionTree.h	/^class EXPBtree : private JJparser{$/;"	c
+EXPTRESSION_TREE_CPP	ExpressionTree.h	2;"	d
+Exp	ExpressionTree.h	/^		vector<string> Exp;$/;"	m	class:EXPBtree
+GetAnswer	ExpressionTree.cpp	/^double EXPBtree::GetAnswer(){$/;"	f	class:EXPBtree
+HEADPATH	Makefile	/^HEADPATH=..\/..\/parser\/$/;"	m
+LIBNAME	Makefile	/^LIBNAME=JJparser$/;"	m
+LIBPATH	Makefile	/^LIBPATH=..\/..\/libfile\/$/;"	m
+Left	ExpressionTree.h	/^	struct TreeNode* Left;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode
+OBJ	Makefile	/^OBJ=$(SRC:%.cpp=%.o)$/;"	m
+PrintInOrder	ExpressionTree.cpp	/^void EXPBtree::PrintInOrder(){$/;"	f	class:EXPBtree
+PrintOrder	ExpressionTree.cpp	/^void EXPBtree::PrintOrder(TreeNode* Node, int Type){$/;"	f	class:EXPBtree
+PrintPostOrder	ExpressionTree.cpp	/^void EXPBtree::PrintPostOrder(){$/;"	f	class:EXPBtree
+PrintPreOrder	ExpressionTree.cpp	/^void EXPBtree::PrintPreOrder(){$/;"	f	class:EXPBtree
+Right	ExpressionTree.h	/^	struct TreeNode* Right;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode
+SRC	Makefile	/^SRC=ExpressionTree.cpp Test.cpp$/;"	m
+TreeNode	ExpressionTree.h	/^struct TreeNode{$/;"	s
+main	Test.cpp	/^int main(){$/;"	f
+root	ExpressionTree.h	/^		TreeNode* root;$/;"	m	class:EXPBtree

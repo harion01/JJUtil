@@ -1,0 +1,26 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+Data	ExpressionTree.h	/^	ElementType Data;$/;"	m	struct:tagETNode
+ETNode	ExpressionTree.h	/^}ETNode;$/;"	t	typeref:struct:tagETNode
+ET_BuildExpressionTree	ExpressionTree.c	/^void ET_BuildExpressionTree(char* PostfixExpression, ETNode** Node){$/;"	f
+ET_CreateNode	ExpressionTree.c	/^ETNode* ET_CreateNode(ElementType NewData){$/;"	f
+ET_DestroyNode	ExpressionTree.c	/^void ET_DestroyNode(ETNode* Node){$/;"	f
+ET_DestroyTree	ExpressionTree.c	/^void ET_DestroyTree(ETNode* Root){$/;"	f
+ET_Evaluate	ExpressionTree.c	/^double ET_Evaluate(ETNode* Tree){$/;"	f
+ET_InorderPrintTree	ExpressionTree.c	/^void ET_InorderPrintTree(ETNode* Node){$/;"	f
+ET_PostoderPrintTree	ExpressionTree.c	/^void ET_PostoderPrintTree(ETNode* Node){$/;"	f
+ET_PreorderPrintTree	ExpressionTree.c	/^void ET_PreorderPrintTree(ETNode* Node){$/;"	f
+EXPRESSION_TREE_H	ExpressionTree.h	2;"	d
+ElementType	ExpressionTree.h	/^typedef char ElementType;$/;"	t
+Left	ExpressionTree.h	/^	struct tagETNode* Left;$/;"	m	struct:tagETNode	typeref:struct:tagETNode::tagETNode
+OBJECTS	Makefile	/^OBJECTS = ExpressionTree.o LinkedListStack.o Calculator.o test.o$/;"	m
+Right	ExpressionTree.h	/^	struct tagETNode* Right;$/;"	m	struct:tagETNode	typeref:struct:tagETNode::tagETNode
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+main	test.c	/^int main(){$/;"	f
+tagETNode	ExpressionTree.h	/^typedef struct tagETNode{$/;"	s
