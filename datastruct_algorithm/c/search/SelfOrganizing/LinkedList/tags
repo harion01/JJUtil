@@ -1,0 +1,24 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+DLL_AppendNode	DoubleLinkedList.c	/^void DLL_AppendNode(Node** Head, Node* NewNode){$/;"	f
+DLL_CreateNode	DoubleLinkedList.c	/^Node* DLL_CreateNode(int NewData){$/;"	f
+DLL_DestroyNode	DoubleLinkedList.c	/^void DLL_DestroyNode(Node* Node){$/;"	f
+DLL_GetNodeAt	DoubleLinkedList.c	/^Node* DLL_GetNodeAt(Node* Head, int Location){$/;"	f
+DLL_GetNodeCount	DoubleLinkedList.c	/^int DLL_GetNodeCount(Node* Head){$/;"	f
+DLL_InsertAfter	DoubleLinkedList.c	/^void DLL_InsertAfter(Node* Current, Node* NewNode){$/;"	f
+DLL_RemoveNode	DoubleLinkedList.c	/^void DLL_RemoveNode(Node** Head, Node* Remove){$/;"	f
+DOUBLY_LINKEDLIST_H	DoubleLinkedList.h	2;"	d
+Data	DoubleLinkedList.h	/^	int Data;$/;"	m	struct:tagNode
+Next	DoubleLinkedList.h	/^	struct tagNode* Next;$/;"	m	struct:tagNode	typeref:struct:tagNode::tagNode
+Node	DoubleLinkedList.h	/^}Node;$/;"	t	typeref:struct:tagNode
+OBJECTS	Makefile	/^OBJECTS = DoubleLinkedList.o Test.o$/;"	m
+Prev	DoubleLinkedList.h	/^	struct tagNode* Prev;$/;"	m	struct:tagNode	typeref:struct:tagNode::tagNode
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+main	Test.c	/^int main(){$/;"	f
+tagNode	DoubleLinkedList.h	/^typedef struct tagNode{$/;"	s
