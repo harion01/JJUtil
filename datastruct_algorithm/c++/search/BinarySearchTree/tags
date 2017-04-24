@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BIN	Makefile	/^BIN=test_target$/;"	m
+BST	BST.h	/^		BST():Root(NULL) {}	$/;"	f	class:BST
+BST	BST.h	/^class BST{$/;"	c
+BST_CPP_H	BST.h	2;"	d
+BST_Node	BST.h	/^		BST_Node(int val):Data(val) {}$/;"	f	class:BST_Node
+BST_Node	BST.h	/^class BST_Node{$/;"	c
+CXX	Makefile	/^CXX=g++$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS=-g -std=c++11 -Wall -c -W$/;"	m
+Data	BST.h	/^		int Data;$/;"	m	class:BST_Node
+DeleteAndFix	BST.cpp	/^void BST::DeleteAndFix(BST_Node** Parent, BST_Node* Target, bool isLeft){$/;"	f	class:BST
+DeleteNode	BST.cpp	/^bool BST::DeleteNode(int data){$/;"	f	class:BST
+InOrderPrint	BST.cpp	/^void BST::InOrderPrint(BST_Node* Node, int depth){$/;"	f	class:BST
+InsertNode	BST.cpp	/^bool BST::InsertNode(int data){$/;"	f	class:BST
+Left	BST.h	/^		class BST_Node* Left;$/;"	m	class:BST_Node	typeref:class:BST_Node::BST_Node
+OBJ	Makefile	/^OBJ=$(SRC:%.cpp=%.o)$/;"	m
+PrintTree	BST.cpp	/^void BST::PrintTree(){$/;"	f	class:BST
+Right	BST.h	/^		class BST_Node* Right;$/;"	m	class:BST_Node	typeref:class:BST_Node::BST_Node
+Root	BST.h	/^		BST_Node* Root;$/;"	m	class:BST
+SRC	Makefile	/^SRC=BST.cpp test.cpp$/;"	m
+SearchData	BST.cpp	/^bool BST::SearchData(int target){$/;"	f	class:BST
+main	test.cpp	/^int main(void){$/;"	f

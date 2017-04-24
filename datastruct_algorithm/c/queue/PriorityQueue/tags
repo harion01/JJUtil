@@ -1,0 +1,28 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+Capacity	PriorityQueue.h	/^	int Capacity;$/;"	m	struct:tagPQ
+Data	PriorityQueue.h	/^	void* Data;$/;"	m	struct:tagPQNode
+Nodes	PriorityQueue.h	/^	PQNode* Nodes;$/;"	m	struct:tagPQ
+OBJECTS	Makefile	/^OBJECTS = Heap.o Test.o$/;"	m
+PQNode	PriorityQueue.h	/^}PQNode;$/;"	t	typeref:struct:tagPQNode
+PQ_Create	PriorityQueue.c	/^PQ* PQ_Create(int InitSize){$/;"	f
+PQ_DeleteMin	PriorityQueue.c	/^void PQ_DeleteMin(PQ* H, PQNode* Root){$/;"	f
+PQ_Destroy	PriorityQueue.c	/^void PQ_Destroy(PQ* H){$/;"	f
+PQ_Enqueue	PriorityQueue.c	/^void PQ_Enqueue(PQ* H, PQNode NewData){$/;"	f
+PQ_GetLeftChild	PriorityQueue.c	/^int PQ_GetLeftChild(int Index){$/;"	f
+PQ_GetParent	PriorityQueue.c	/^int PQ_GetParent(int Index){$/;"	f
+PQ_H	PriorityQueue.h	2;"	d
+PQ_PrintNodes	PriorityQueue.c	/^void PQ_PrintNodes(PQ* H){$/;"	f
+PQ_SwapNodes	PriorityQueue.c	/^void PQ_SwapNodes(PQ* H, int Index1, int Index2){$/;"	f
+PriorityQueue	PriorityQueue.h	/^}PriorityQueue;$/;"	t	typeref:struct:tagPQ
+PriorityType	PriorityQueue.h	/^typedef int PriorityType;$/;"	t
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+UsedSize	PriorityQueue.h	/^	int UsedSize;$/;"	m	struct:tagPQ
+tagPQ	PriorityQueue.h	/^typedef struct tagPQ{$/;"	s
+tagPQNode	PriorityQueue.h	/^typedef struct tagPQNode{$/;"	s

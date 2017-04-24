@@ -9,10 +9,17 @@ int main(){
 	SBTNode* E = SBT_CreateNode('E');
 	SBTNode* F = SBT_CreateNode('F');
 	SBTNode* G = SBT_CreateNode('G');
+
+	SBTNode* Z = SBT_CreateNode('Z');
+	SBTNode* X = SBT_CreateNode('X');
+
 	
 	A->Left = B;
 	B->Left = C;
 	B->Right = D;
+
+	D->Left = Z;
+	D->Right = X;
 
 	A->Right = E;
 	E->Left = F;

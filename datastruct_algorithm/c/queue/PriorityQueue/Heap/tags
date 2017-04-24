@@ -1,0 +1,29 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+Capacity	Heap.h	/^	int Capacity;$/;"	m	struct:tagHeap
+Data	Heap.h	/^	ElementType Data;$/;"	m	struct:tagHeapNode
+ElementType	Heap.h	/^typedef int ElementType;$/;"	t
+HEAP_Create	Heap.c	/^Heap* HEAP_Create(int InitSize){$/;"	f
+HEAP_DeleteMin	Heap.c	/^void HEAP_DeleteMin(HEAP* H, HeapNode* Root){$/;"	f
+HEAP_Destroy	Heap.c	/^void HEAP_Destroy(Heap* H){$/;"	f
+HEAP_GetLeftChild	Heap.c	/^int HEAP_GetLeftChild(int Index){$/;"	f
+HEAP_GetParent	Heap.c	/^int HEAP_GetParent(int Index){$/;"	f
+HEAP_H	Heap.h	2;"	d
+HEAP_Insert	Heap.c	/^void HEAP_Insert(Heap* H, ElementType NewData){$/;"	f
+HEAP_PrintNodes	Heap.c	/^void HEAP_PrintNodes(Heap* H){$/;"	f
+HEAP_SwapNodes	Heap.c	/^void HEAP_SwapNodes(Heap* H, int Index1, int Index2){$/;"	f
+Heap	Heap.h	/^}Heap;$/;"	t	typeref:struct:tagHeap
+HeapNode	Heap.h	/^}HeapNode;$/;"	t	typeref:struct:tagHeapNode
+Nodes	Heap.h	/^	HeapNode* Nodes;$/;"	m	struct:tagHeap
+OBJECTS	Makefile	/^OBJECTS = Heap.o Test.o$/;"	m
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+UsedSize	Heap.h	/^	int UsedSize;$/;"	m	struct:tagHeap
+main	Test.c	/^int main(void){$/;"	f
+tagHeap	Heap.h	/^typedef struct tagHeap{$/;"	s
+tagHeapNode	Heap.h	/^typedef struct tagHeapNode{$/;"	s
