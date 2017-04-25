@@ -1,7 +1,7 @@
 .SUFFIXES : .c .o .cpp   
 #surfix format for target file
 
-OBJECTS = BinarySearchTree.o Test.o
+OBJECTS = OpenAddressing.o Test.o
 #object file name
 
 CC = g++

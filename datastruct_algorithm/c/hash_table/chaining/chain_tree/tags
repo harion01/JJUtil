@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BINARY_SEARCH_TREE_H	BinarySearchTree.h	2;"	d
+BSTNode	BinarySearchTree.h	/^}BSTNode;$/;"	t	typeref:struct:tagBSTNode
+BST_CreateNode	BinarySearchTree.c	/^BSTNode* BST_CreateNode(int key, char* value ){$/;"	f
+BST_DestroyNode	BinarySearchTree.c	/^void BST_DestroyNode(BSTNode* Node){$/;"	f
+BST_DestroyTree	BinarySearchTree.c	/^void BST_DestroyTree(BSTNode* Tree){$/;"	f
+BST_InorderPrintTree	BinarySearchTree.c	/^void BST_InorderPrintTree(BSTNode* Node){$/;"	f
+BST_InsertNode	BinarySearchTree.c	/^void BST_InsertNode(BSTNode* Tree, BSTNode* Child){$/;"	f
+BST_RemoveNode	BinarySearchTree.c	/^BSTNode* BST_RemoveNode(BSTNode* Tree, BSTNode* Parent, int Target){$/;"	f
+BST_SearchMinNode	BinarySearchTree.c	/^BSTNode* BST_SearchMinNode(BSTNode* Tree){$/;"	f
+BST_SearchNode	BinarySearchTree.c	/^BSTNode* BST_SearchNode(BSTNode* Tree, int Target){$/;"	f
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+CHAINING_HASH_TABLE_H	Chaining.h	2;"	d
+CHT_CreateHashTable	Chaining.c	/^HashTable* CHT_CreateHashTable(int TableSize){$/;"	f
+CHT_DestroyHashTable	Chaining.c	/^void CHT_DestroyHashTable(HashTable* HT){$/;"	f
+CHT_DestroyList	Chaining.c	/^void CHT_DestroyList( List L){$/;"	f
+CHT_Get	Chaining.c	/^char* CHT_Get(HashTable* HT, int Key){$/;"	f
+CHT_Hash	Chaining.c	/^int CHT_Hash(int Key , int TableSize){$/;"	f
+CHT_Set	Chaining.c	/^void CHT_Set(HashTable* HT, int Key, char* Value){$/;"	f
+Data	BinarySearchTree.h	/^}Data;$/;"	t	typeref:struct:tagData
+DataNode	BinarySearchTree.h	/^	Data* DataNode;$/;"	m	struct:tagBSTNode
+ElementType	BinarySearchTree.h	/^typedef Data ElementType;$/;"	t
+HashTable	Chaining.h	/^} HashTable;$/;"	t	typeref:struct:tagHashTable
+Key	BinarySearchTree.h	/^	int Key;$/;"	m	struct:tagData
+Left	BinarySearchTree.h	/^	struct tagBSTNode* Left;$/;"	m	struct:tagBSTNode	typeref:struct:tagBSTNode::tagBSTNode
+List	Chaining.h	/^typedef BSTNode* List;$/;"	t
+OBJECTS	Makefile	/^OBJECTS = BinarySearchTree.o Chaining.o main.o$/;"	m
+Right	BinarySearchTree.h	/^	struct tagBSTNode* Right;$/;"	m	struct:tagBSTNode	typeref:struct:tagBSTNode::tagBSTNode
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+Table	Chaining.h	/^	BSTNode** Table;$/;"	m	struct:tagHashTable
+TableSize	Chaining.h	/^	int TableSize;$/;"	m	struct:tagHashTable
+Value	BinarySearchTree.h	/^	char* Value;$/;"	m	struct:tagData
+main	main.c	/^int main(void){$/;"	f
+tagBSTNode	BinarySearchTree.h	/^typedef struct tagBSTNode{$/;"	s
+tagData	BinarySearchTree.h	/^typedef struct tagData$/;"	s
+tagHashTable	Chaining.h	/^typedef struct tagHashTable$/;"	s
