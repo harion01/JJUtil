@@ -129,6 +129,4 @@ void PQ_SwapNodes(PriorityQueue* H, int Index1, int Index2){
 	free(Temp);
 }
 
-int PQ_IsEmpty(PriorityQueue* Q){
-	return (Q->UsedSize == 0);
-}
+

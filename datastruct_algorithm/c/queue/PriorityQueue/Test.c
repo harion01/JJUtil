@@ -27,19 +27,10 @@ int main(void){
 	PQ_Enqueue(PQueue, Nodes[5]);
 
 	printf("Q element : %d \n", PQueue->UsedSize);
-
-	PQ_Dequeue(PQueue, &Popped);
-	PrintNode(&Popped);
-	PQ_Dequeue(PQueue, &Popped);
-	PrintNode(&Popped);
-	PQ_Dequeue(PQueue, &Popped);
-	PrintNode(&Popped);
-	PQ_Dequeue(PQueue, &Popped);
-	PrintNode(&Popped);
-	PQ_Dequeue(PQueue, &Popped);
-	PrintNode(&Popped);
-	PQ_Dequeue(PQueue, &Popped);
-	PrintNode(&Popped);
+	while(!PQ_IsEmpty(PQueue)){
+		PQ_Dequeue(PQueue, &Popped);
+		PrintNode(&Popped);
+	}
 
 	return 0;
 }
