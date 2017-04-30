@@ -50,7 +50,7 @@ void Prim(Graph* G, Vertex* StartVertex, Graph* MST){
 			Vertex* TargetVertex = CurrentEdge->Target;
 
 			//if target vertex is not added as from node && 
-			//weight of edge is less than previous weight 
+			//weight of edge is less than previous weight  -> to search shortest path
 			//(from current node to target node)
 			if(Fringes[TargetVertex->Index] == NULL &&
 				CurrentEdge->Weight < Weight[TargetVertex->Index])
@@ -96,5 +96,75 @@ void Prim(Graph* G, Vertex* StartVertex, Graph* MST){
 }
 
 
-void Kruskal(Graph* G, Graph* MST);
+void Kruskal(Graph* G, Graph* MST){
+	int i;
+	Vertex* CurrentVertex = NULL;
+	Vertex** MSTVertices = (Vertex**)calloc(G->VertexCount, sizeof(Vertex*));
+
+	DisjointSet** VertexSet = (DisjointSet**)calloc(G->VertexCount, sizeof(DisjointSet*));
+	
+	PriorityQueue* PQ = PQ_Create(10);
+
+	i = 0;
+	CurrentVertex = G->vertices;
+	while(CurrentVertex != NULL){
+		Edge* CurrentEdge;
+		
+		//make every vertex into set
+		VertexSet[i] = DS_MakeSet(CurrentVertex);
+		MSTVertices[i] = CreateVertex(CurrentVertex->Data);
+		//init mst vertex(no edge)
+		AddVertex(MST, MSTVertices[i]);
+		
+		//put every edge to priority queue
+		CurrentEdge = CurrentVertex->AdjacencyList;
+		while(CurrentEdge != NULL){
+			PQNode NewNode = {CurrentEdge->Weight, CurrentEdge};
+			PQ_Enqueue(PQ,NewNode);
+			
+			CurrentEdge = CurrentEdge->Next;
+		}
+		
+		CurrentVertex = CurrentVertex->Next;
+		i++;
+	}
+	
+	while(!PQ_IsEmpty(PQ)){
+		Edge* CurrentEdge;
+		int FromIndex;
+		int ToIndex;
+		PQNode Popped;
+
+		PQ_Dequeue(PQ, &Popped);
+		CurrentEdge = (Edge*)Popped.Data;
+
+		FromIndex = CurrentEdge->From->Index;
+		ToIndex = CurrentEdge->Target->Index;
+		
+		//if the source and destination of edge is not in same set (cycle check)
+		if(DS_FindSet(VertexSet[FromIndex]) != DS_FindSet(VertexSet[ToIndex])){
+
+			//for non-direction edge
+			AddEdge(MSTVertices[FromIndex],
+				CreateEdge(MSTVertices[FromIndex],
+						MSTVertices[ToIndex],
+						CurrentEdge->Weight) );
+
+			AddEdge(MSTVertices[ToIndex],
+				CreateEdge(MSTVertices[ToIndex],
+						MSTVertices[FromIndex],
+						CurrentEdge->Weight) );
+
+			//union destination vertex and source vertex (linked by edge)
+			DS_UnionSet(VertexSet[FromIndex], VertexSet[ToIndex]);
+		}
+	}
+
+	for(i=0; i<G->VertexCount ; i++){
+		DS_DestroySet(VertexSet[i]);
+	}
+
+	free(VertexSet);
+	free(MSTVertices);
+}
 

@@ -1,10 +1,9 @@
 #include "Graph.h"
-#include "MST.h"
+#include "ShortestPath.h"
 
 int main(void){
 	Graph* graph = CreateGraph();
 	Graph* PrimMST = CreateGraph();
-	Graph* KruskalMST = CreateGraph();
 
 	Vertex* A = CreateVertex('A');
 	Vertex* B = CreateVertex('B');
@@ -60,14 +59,10 @@ int main(void){
 
 	AddEdge(I, CreateEdge(I, G, 106));
 
-	printf("Prim's Algorithm\n");
-	Prim(graph, B, PrimMST);
+	Dijkstra(graph, B, PrimMST);
 	PrintGraph(PrimMST);
 
-	printf("Kruskal's Algorithm\n");
-	Prim(graph, B, KruskalMST);
-	PrintGraph(KruskalMST);
-	
+
 	DestroyGraph(graph);
 
 	return 0;

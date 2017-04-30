@@ -25,5 +25,6 @@ void PQ_Dequeue(PriorityQueue* H, PQNode* Root);
 int PQ_GetParent(int Index);
 int PQ_GetLeftChild(int Index);
 void PQ_SwapNodes(PriorityQueue* H, int Index1, int Index2);
+int PQ_IsEmpty(PriorityQueue* Q);
 
 #endif

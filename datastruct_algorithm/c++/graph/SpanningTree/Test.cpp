@@ -46,12 +46,18 @@ int main(void){
 
 	test.MakePrimMST(1);
 
-
-
 	cout << endl;
 	cout << endl;
 	cout << endl;
 	test.printMST();
+	cout << endl;
+	cout << endl;
+	cout << endl;
+
+	test.MakeKruskalMST();
+	test.printKruskalMST();
+
+
 	
 	return 0;
 }

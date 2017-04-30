@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -c -W -Wall$/;"	m
+DISJOINT_H	DisjointSet.h	2;"	d
+DS_DestroySet	DisjointSet.c	/^void DS_DestroySet(DisjointSet* Set){$/;"	f
+DS_FindSet	DisjointSet.c	/^DisjointSet* DS_FindSet(DisjointSet* Set){$/;"	f
+DS_MakeSet	DisjointSet.c	/^DisjointSet* DS_MakeSet(void* NewData){$/;"	f
+DS_UnionSet	DisjointSet.c	/^void DS_UnionSet(DisjointSet* Set1, DisjointSet* Set2){$/;"	f
+Data	DisjointSet.h	/^	void* Data;$/;"	m	struct:tagDisjointSet
+DisjointSet	DisjointSet.h	/^}DisjointSet;$/;"	t	typeref:struct:tagDisjointSet
+OBJECTS	Makefile	/^OBJECTS = DisjointSet.o Test.o$/;"	m
+Parent	DisjointSet.h	/^	struct tagDisjointSet* Parent;$/;"	m	struct:tagDisjointSet	typeref:struct:tagDisjointSet::tagDisjointSet
+TARGET	Makefile	/^TARGET = test_target$/;"	m
+main	Test.c	/^int main(void){$/;"	f
+tagDisjointSet	DisjointSet.h	/^typedef struct tagDisjointSet$/;"	s
