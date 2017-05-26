@@ -2,6 +2,7 @@
 #define JJPARSER_HEAD
 
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <sstream>
 
@@ -24,6 +25,10 @@ class JJparser{
 
 		vector<string> parseMathExpression(string exptrssion);
 		vector<string> parse(string s, string delim);
+		
+		//find data from file
+		bool findFromFile(const char* keyNdelim, const char* path, string& retstr);
+
 
 };
 

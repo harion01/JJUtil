@@ -4,11 +4,43 @@ using namespace std;
 
 int main(){
 
-
+	
 	string s = "test is bad test is good";
 	string delim = "is";
 
 	JJparser JJ;
+
+	//test config path /home/jjlee/git/JJlib/parser/config.test
+	/*
+	testkey=testvalue
+
+	testkey=tet
+
+	ttt = 123
+
+	123 = ttt
+	*/
+	string value;
+	
+	if(JJ.findFromFile("testkey=", "/home/jjlee/git/JJlib/parser/config.test", value)){
+		cout << "data found! value [" << value << "]" << endl;
+	}else{
+		cout << "no data" << endl;
+	}
+
+	if(JJ.findFromFile("ttt = ", "/home/jjlee/git/JJlib/parser/config.test", value)){
+		cout << "data found! value [" << value << "]" << endl;
+	}else{
+		cout << "no data" << endl;
+	}
+
+	if(JJ.findFromFile("nodatanono", "/home/jjlee/git/JJlib/parser/config.test", value)){
+		cout << "data found! value [" << value << "]" << endl;
+	}else{
+		cout << "no data" << endl;
+	}
+
+	/*
 	int next = 0;
 	cout << "[" <<  JJ.getToken(s,0, delim,&next) << "]"<< endl;
 	cout << "next : " << next << endl;
@@ -52,5 +84,10 @@ int main(){
 	for(auto i:math){
 		cout << "[" <<  i  << "]" <<endl;
 	}
+
+
+
+
+	*/
 	return 0;
 }

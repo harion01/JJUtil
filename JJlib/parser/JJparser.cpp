@@ -151,4 +151,26 @@ vector<string> JJparser::parse(string s, string delim){
 	return ret;
 }
 
+//find data from file
+bool JJparser::findFromFile(const char* keyNdelim, const char* path, string& retstr){
+	bool ret = false;
+	string strbuf;
+	string key = keyNdelim;
+	ifstream filedata(path);
+
+	while(getline(filedata, strbuf)){
+		//cout << strbuf << endl;
+		string::size_type pos = strbuf.find(key);
+		if(pos != string::npos){
+			retstr = strbuf.substr(pos+key.size(), strbuf.size());
+			ret = true;
+			break;
+		}
+		strbuf.clear();
+	}
+
+	filedata.close();
+	return ret;
+}
+
 
